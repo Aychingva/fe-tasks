@@ -1,0 +1,86 @@
+body{
+    background-color:#59316b ;
+    color:white;
+    box-sizing: border-box;
+    font-family: "Source Sans Pro Light", sans-serif;
+   
+    
+}
+
+
+
+
+.content{
+    text-align: center;
+    
+
+}
+
+.item{
+    
+    
+    font-size: 5.5rem;
+    line-height: 1.2;
+    
+   
+     
+}
+
+  
+.car{
+     
+ 
+   
+    font-size: 1.75rem;
+    line-height: 1;
+    
+}
+
+.content1{
+    text-align: center;
+    display: flex;
+     gap: 20px; 
+    
+    
+}
+
+.download-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.circle{
+    font-size: 5em;
+    color:white;
+    background-color: #401753;
+    
+    text-align: center;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-left: 90px;
+    margin-right: 90px;
+   
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button {
+    color: #59316b;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.signature{
+    color:white;
+    margin-top: 5px;
+    text-align: left;
+
+}
+
