@@ -1,0 +1,145 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+
+}
+
+h1{
+    text-align: center;
+
+    color: white;
+    margin-bottom: -50px;
+ 
+   
+}
+body{
+    background-color:   #1a9ac9;
+     padding-top: 50px;
+   
+}
+main{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+} 
+.container{
+
+    width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(3,333px);
+    grid-template-rows: repeat(3,186);
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    
+} 
+
+   
+img{
+    width: 100%;
+    vertical-align:middle;
+    height: 100%;
+}
+
+.item{
+    animation-duration: 2s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+.item:nth-child(1){
+    animation-name: anim1;
+}
+
+@keyframes anim1 {
+    0%{
+        transform: translate(0,0);
+
+    }
+    50%{
+        transform: translate(333px,0);
+    }
+
+    100%{
+
+        transform: translate(333px,186px);
+    }
+}
+
+.item:nth-child(2),.item:nth-child(9){
+    animation-name: anim2;
+}
+
+
+@keyframes anim2 {
+    from{
+        transform: translate(0,0);
+    }
+    to{
+        transform: translate(-333px,0);
+    }
+}
+
+
+.item:nth-child(3),.item:nth-child(4){
+    animation-name: anim3;
+}
+
+@keyframes anim3 {
+    from{
+        transform: translate(0,0);
+    }
+    to{
+        transform: translate(0,186px);
+    }
+}
+
+.item:nth-child(5){
+    animation-name: anim4;
+}
+
+@keyframes anim4 {
+    0%{
+        transform: translate(0,0);
+
+    }
+    50%{
+        transform: translate(0,186px);
+    }
+
+    100%{
+
+        transform: translate(333px,186px);
+    }
+    
+}
+
+.item:nth-child(6),.item:nth-child(7){
+    animation-name: anim5;
+}
+
+
+@keyframes anim5 {
+    from{
+        transform: translate(0,0);
+    }
+    to{
+        transform: translate(0,-186px);
+    }
+}
+
+.item:nth-child(8){
+    animation-name: anim6;
+}
+
+@keyframes anim6 {
+    from{
+        transform: translate(0,0);
+    }
+    to{
+        transform: translate(0,-372px);
+    }
+    
+}
