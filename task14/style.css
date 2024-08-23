@@ -1,0 +1,45 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    width: 450px;
+    position: relative;
+   
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+
+   img{
+    width: 100%;
+    display: block;
+   }
+    .text{
+    
+    width: 450px;
+    flex-shrink: 0;
+    background-color: black;
+    color: aliceblue;
+    padding: 30px;
+    
+    
+   }
+
+   &:hover>*{
+    transition: all 0.4s;
+   }
+   &:hover>*{
+    transform: translateX(-450px);
+
+   }
+}
