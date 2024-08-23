@@ -1,0 +1,110 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+ .box{
+    
+    height: 450px;
+    width: 350px;
+    overflow: hidden;
+    border-radius:5%;
+    position: relative;
+
+    background-color: green;
+    
+    img{
+        width: 100%;
+        height: 100%;
+        transition: all 0.6s;
+  
+    }
+    div{
+        background-color: blue;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top:10px;
+        left: 10px;
+
+    }
+    .firstbox{
+        background-color: greenyellow;
+        z-index: 1;
+        animation:animi1 3s 
+       
+    }
+
+    .secondbox{
+        animation:animi2 3s  ;
+        background-color: red
+    }
+    &:hover{
+        background-color: black;
+        .img1{
+            transform: translateY(-450px);
+            scale:0.4
+        }
+       
+        .img2{
+            transform: translateY(-400px);
+            scale:1.1
+        }
+    }
+} 
+
+@keyframes animi1 {
+    0%{
+        transform: translate(10px,10px);
+
+    }
+    25%{
+        transform: translate(280px,10px);
+
+    }
+    50%{
+        transform: translate(280px,380px);
+        border-radius: 50%;
+
+    }
+    75%{
+        transform: translate(-10px,380px);
+
+    }
+    100%{
+        transform: translate(10,10);
+    }
+    
+}
+
+@keyframes animi2 {
+    0%{
+        transform: translate(10px,10px);
+
+    }
+    25%{
+        transform: translate(10px,380px);
+
+    }
+    50%{
+        transform: translate(280px,380px);
+        
+
+    }
+    75%{
+        transform: translate(280px,-10px);
+
+    }
+    100%{
+        transform: translate(10,10);
+    }
+    
+}
+
