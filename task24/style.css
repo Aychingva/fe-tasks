@@ -1,0 +1,138 @@
+header {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    position: fixed;
+    z-index: 1;
+    width: 100%; 
+    top: 0;
+    background-color: azure;
+}
+
+#intro{
+    background-image: url(https://preview.colorlib.com/theme/rezume/images/image_1.jpg.webp);
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-repeat:no-repeat;
+    height: 100vh;
+    vertical-align: bottom;
+    
+  
+}
+
+.navlink:hover{
+    color: #bac964;
+    transition: color 0.3s ease;
+}
+
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.551);
+    position: absolute;
+    padding: 50px;
+}
+
+
+.container{
+    width: 100%;
+    max-width: 1145px;
+    margin-inline: auto;
+    position: relative;
+   
+   
+  
+}
+
+
+.about{
+   text-align: center;
+   padding: 200px;
+   font-size: 1.5rem;
+   color:white;
+   h1{
+    font-size: 2.5rem;
+   }
+   .dif{
+    color:grey;
+    text-transform: uppercase;
+    font-size: 1rem;
+   }
+}
+
+
+.hello .blockquote {
+   
+    border-radius: 7%; 
+    position: relative; 
+    margin-left: 40px;
+    padding: 30px;
+    box-shadow: 0 2px 30px -2px rgba(0, 0, 0, 0.1);
+    background-color: #333;
+
+}
+
+
+.hello .blockquote::before{
+    content:"";
+    border-width: 0px 20px 20px 0px;
+    position: absolute;
+    left: -15px;
+    top:20px;
+    border-style: solid;
+    border-color: transparent #333 transparent transparent;
+    z-index: 2;
+    border: 1px solid red;
+}
+
+
+
+
+
+
+.container{
+    width: 100%;
+    max-width: 1145px;
+    margin-inline: auto;
+    position: relative;
+   
+   
+  
+}
+
+
+
+
+.material-symbols-outlined{
+    margin: auto;
+}
+
+#touch input  {
+    
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    padding:1%;
+    background-color: #333;
+    border: none;
+    
+    margin-bottom: 20px;
+}
+
+
+#touch textarea{
+    width: 100%;
+    background-color: #333;
+}
+
+li{
+    /* padding-bottom: 10px; */
+    color:white;
+    list-style: none;
+    span{
+        display: block;
+        padding-bottom: 10px;
+    }
+}
