@@ -21,8 +21,8 @@ header {
   
 }
 
-.navlink:hover{
-    color: #bac964;
+.nav-link:hover{
+    color: #bac964 ;
     transition: color 0.3s ease;
 }
 

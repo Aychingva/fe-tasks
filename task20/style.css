@@ -1,0 +1,44 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: whitesmoke;
+}
+.about{
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    margin-bottom: 17px;
+    text-transform: uppercase;
+   
+    /* display: inline-block; */
+    position: relative;
+    padding-left: 68px;
+}
+
+.about p{
+    
+    color: #eb566c;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+.after-img{
+    background-color: white;
+    color: #eb566c;
+    height: 70px;
+}
+
+.image{
+    overflow: hidden;
+    img{
+        transition: transform 0.3s ease;
+    }
+    
+    &:hover img{
+        transform: scale(1.1);
+    }
+}
