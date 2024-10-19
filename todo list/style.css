@@ -1,0 +1,47 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    background-color: bisque;
+}
+
+.container{
+    max-width: 1140px;
+    padding:30px;
+   
+    justify-content: center;
+    height: 400px;
+   
+
+    
+
+}
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+
+
+button{
+   background-color: red;
+   border:none;
+   border-radius: 3px;
+   color: white;
+}
+
+h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 70px;
+    color: red;
+
+}
+
+.a{
+   
+    list-style: none;
+
+}
