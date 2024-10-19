@@ -544,7 +544,14 @@ const data=[
   const  burger=document.querySelector(".pizzas")
   const searchinput=document.getElementById("searchinput")
 
+  const basketbtn=document.querySelector(".quick-basket")
+  const basketcard=document.querySelector(".quick-basket-card")
+  const quickproducts=document.querySelector(".quick-products")
+  const localdata=JSON.parse(localStorage.getItem("cartlist"))
+  const totalprice=document.getElementById("totalprice")
+  let cartlist=[]
 
+let isquickcard=false;
   data.forEach(item => {
     burger.innerHTML += `
       <div class="pizza">
@@ -552,7 +559,7 @@ const data=[
         <h3>${item.name}</h3>
         <div class="btn">
           <p>$${item.price}</p>
-          <button>+</button>
+          <button onclick="addtocart('${item.id}')">+</button>
         </div>
       </div>
     `;
@@ -569,10 +576,84 @@ const data=[
         <h3>${item.name}</h3>
         <div class="btn">
           <p>$${item.price}</p>
-          <button>+</button>
+          <button onclick="addtocart('${item.id}')">+</button>
         </div>
       </div>
     `;
 
     })
   });
+
+
+  function addtocart(id) {
+    const foundprod = structuredClone(data.find(item => item.id === id));
+    const cartprod = cartlist.find(item => item.id === id);
+  
+    if (cartprod) {
+      cartprod.count++;
+    } else {
+      foundprod.count = 1;
+      cartlist.push(foundprod);
+    }
+    
+    
+    localStorage.setItem("cartlist", JSON.stringify(cartlist));
+    quickbasketrender();
+  
+    
+  }
+  
+
+  basketbtn.addEventListener("click", () => {
+    if (isquickcard) {
+      basketcard.style.left = "-400px"; 
+      isquickcard = false;
+    } else {
+      basketcard.style.left = "0";
+      isquickcard = true;
+    }
+  });
+  function quickbasketrender() {
+    quickproducts.innerHTML = ""; 
+    cartlist.forEach(item => {
+      quickproducts.innerHTML += `
+        <li class="quick-product">
+          <div class="about">
+            <h5>${item.name}</h5>
+            <img src="${item.img}" alt="">
+          </div>
+          <div class="btn">
+            <h3>$${item.price*item.count}</h3>
+            <div>
+             <button onclick="countincrease('${item.id}')">+</button>
+              <span>${item.count}</span>
+              <button onclick="countdecrease('${item.id}')">-</button>
+            </div>
+          </div>
+        </li>
+      `;
+    });
+    totalprice.innerText = cartlist.reduce((acc, item) => acc += item.count * item.price, 0);
+   
+  }
+  
+  function countincrease(id) {
+    let foundprod = cartlist.find(item => item.id === id);
+    
+    foundprod.count++;  
+    quickbasketrender();
+    
+  }
+  
+  function countdecrease(id) {
+    let foundprod = cartlist.find(item => item.id === id);
+    if (foundprod.count > 1) { 
+      foundprod.count--; 
+      quickbasketrender(); 
+    }
+  }
+
+
+
+
+  
